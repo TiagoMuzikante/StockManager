@@ -21,7 +21,7 @@ public class RecipeController {
 
   @PostMapping
   public ResponseEntity<Recipe> save(RecipePostDTO recipePostDTO){
-    return new ResponseEntity<Recipe>(recipeService.save(recipePostDTO), HttpStatus.CREATED);
+    return new ResponseEntity<>(recipeService.save(recipePostDTO), HttpStatus.CREATED);
   }
 
   @GetMapping
