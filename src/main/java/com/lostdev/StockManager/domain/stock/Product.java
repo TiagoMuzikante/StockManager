@@ -1,0 +1,37 @@
+package com.lostdev.StockManager.domain.stock;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
+
+import java.time.LocalDate;
+import java.util.List;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity
+public class Product {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+  private String name;
+  private String address;
+  private Boolean noAddress;
+  private String brand;
+  private Integer amount = 0;
+  private Integer minimunAmount = 0;
+  private Integer itensPerPackage = 0;
+  private LocalDate validate = null;
+  private Boolean noValidate = false;
+
+  @OneToMany(mappedBy = "product")
+  private List<ProductEntry> productEntries;
+  @OneToMany(mappedBy = "product")
+  private List<ProductOut> productOuts;
+
+}
