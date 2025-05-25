@@ -32,7 +32,7 @@ public abstract class ProductOutMapper {
   }
 
   @Named("mapIdToProduct")
-  public Product mapIdToProduct(Long id){
+  protected Product mapIdToProduct(Long id){
     if(id == null) return null;
     return productService.findById(id);
   }

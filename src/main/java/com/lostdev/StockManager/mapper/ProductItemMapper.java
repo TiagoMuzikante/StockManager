@@ -15,9 +15,9 @@ public abstract class ProductItemMapper {
   @Autowired
   private ProductService productService;
 
+  @Mapping(source = "productId", target = "product", qualifiedByName = "idToProduct")
   protected abstract ProductItem toProductItem(ProductItemDTO productItemDTO);
 
-  @Mapping(target = "product", qualifiedByName = "idToProduct")
   protected abstract ProductItemDTO toProductItemDTO(ProductItem productItem);
 
   @Named("idToProduct")

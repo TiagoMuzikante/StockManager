@@ -16,11 +16,11 @@ public abstract class RecipeMapper {
 
   protected ProductItemMapper productItemMapper;
 
-  @Mapping(source = "productItemDTOs", target = "productItems", qualifiedByName = "ToProductItemList")
+  @Mapping(source = "productItemDTOs", target = "productItems", qualifiedByName = "toProductItemList")
   public abstract Recipe toRecipe(RecipePostDTO recipePostDTO);
 
   @Named("toProductItemList")
-  private List<ProductItem> toProductItemList(List<ProductItemDTO> productItemDTOS){
+  protected List<ProductItem> toProductItemList(List<ProductItemDTO> productItemDTOS){
     return productItemDTOS
         .stream()
         .map(productItemMapper::toProductItem)

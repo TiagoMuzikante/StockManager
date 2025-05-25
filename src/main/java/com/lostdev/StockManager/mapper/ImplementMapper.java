@@ -19,7 +19,7 @@ public abstract class ImplementMapper {
   public abstract Implement toImplement(ImplementPostDTO implementPostDTO);
 
   @Named("idToRecipe")
-  private Recipe idToRecipe(Long id){
+  protected Recipe idToRecipe(Long id){
     return recipeService.findById(id);
   }
 
