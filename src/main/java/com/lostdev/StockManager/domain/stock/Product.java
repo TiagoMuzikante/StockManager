@@ -25,8 +25,6 @@ public class Product {
   private Integer amount = 0;
   private Integer minimunAmount = 0;
   private Integer itensPerPackage = 0;
-  private LocalDate validate = null;
-  private Boolean noValidate = false;
 
   @OneToMany(mappedBy = "product")
   private List<ProductEntry> productEntries;
