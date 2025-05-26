@@ -2,8 +2,10 @@ package com.lostdev.StockManager.mapper;
 
 import com.lostdev.StockManager.DTOs.recipe.RecipePostDTO;
 import com.lostdev.StockManager.DTOs.utils.ProductItemDTO;
+import com.lostdev.StockManager.domain.stock.Implement;
 import com.lostdev.StockManager.domain.stock.Recipe;
 import com.lostdev.StockManager.domain.utils.ProductItem;
+import com.lostdev.StockManager.service.ImplementService;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
@@ -15,8 +17,10 @@ import java.util.stream.Collectors;
 public abstract class RecipeMapper {
 
   protected ProductItemMapper productItemMapper;
+  protected ImplementService implementService;
 
-  @Mapping(source = "productItemDTOs", target = "productItems", qualifiedByName = "toProductItemList")
+  @Mapping(target = "productItems", qualifiedByName = "toProductItemList")
+  @Mapping(source = "implementId", target = "implement", qualifiedByName = "toImplement")
   public abstract Recipe toRecipe(RecipePostDTO recipePostDTO);
 
   @Named("toProductItemList")
@@ -25,6 +29,11 @@ public abstract class RecipeMapper {
         .stream()
         .map(productItemMapper::toProductItem)
         .collect(Collectors.toList());
+  }
+
+  @Named("toImplement")
+  protected Implement toImplement(Long id){
+    return implementService.findById(id);
   }
 
 }
