@@ -14,8 +14,6 @@ import java.util.List;
 @Builder
 public class RecipePostDTO {
 
-  private Long id;
-
-  private List<ProductItemDTO> productItemDTOs;
+  private List<ProductItemDTO> productItems;
 
 }
