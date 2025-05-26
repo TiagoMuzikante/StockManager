@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/implements")
+@RequestMapping("/implement")
 @RestController
 @CrossOrigin
 @RequiredArgsConstructor
