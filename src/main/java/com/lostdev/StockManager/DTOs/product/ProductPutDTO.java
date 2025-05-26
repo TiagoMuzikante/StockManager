@@ -19,7 +19,5 @@ public class ProductPutDTO {
   private Integer amount;
   private Integer minimunAmount;
   private Integer itensPerPackage;
-  private LocalDate validate;
-  private Boolean noValidate;
 
 }

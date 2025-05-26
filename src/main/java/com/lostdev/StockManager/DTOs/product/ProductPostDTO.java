@@ -18,7 +18,5 @@ public class ProductPostDTO {
   private String brand;
   private Integer minimunAmount;
   private Integer itensPerPackage;
-  private LocalDate validate;
-  private Boolean noValidate;
 
 }
