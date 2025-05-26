@@ -18,6 +18,9 @@ public class Recipe {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
+  @OneToOne(mappedBy = "recipe")
+  private Implement implement;
+
   @ElementCollection
   private List<ProductItem> productItems;
 
