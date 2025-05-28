@@ -1,10 +1,8 @@
-package com.lostdev.StockManager.DTOs.product;
+package com.lostdev.StockManager.dtos.product;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
@@ -14,9 +12,9 @@ public class ProductPostDTO {
   private String name;
   private String address;
   private Boolean noAddress;
-  private Integer amount;
   private String brand;
-  private Integer minimunAmount;
-  private Integer itensPerPackage;
+  private Integer minimumAmount;
+
+  private Long supplierId;
 
 }

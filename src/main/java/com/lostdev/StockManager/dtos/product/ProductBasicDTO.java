@@ -1,4 +1,4 @@
-package com.lostdev.StockManager.DTOs.product;
+package com.lostdev.StockManager.dtos.product;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,7 +11,10 @@ public class ProductBasicDTO {
 
   private Long id;
   private String name;
-  private Integer amount;
+  private Integer availableAmount;
+  private Integer reservedAmount;
+  private Integer pendingAmount;
+  private Integer minimumAmount;
   private String address;
 
 }

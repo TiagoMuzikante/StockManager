@@ -1,12 +1,11 @@
 package com.lostdev.StockManager.domain.stock;
 
+import com.lostdev.StockManager.domain.Supplier;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.time.LocalDate;
 import java.util.List;
 
 @Data
@@ -22,13 +21,19 @@ public class Product {
   private String address;
   private Boolean noAddress;
   private String brand;
-  private Integer amount = 0;
-  private Integer minimunAmount = 0;
-  private Integer itensPerPackage = 0;
+  private Integer availableAmount = 0;
+  private Integer reservedAmount = 0;
+  private Integer pendingAmount = 0;
+  private Integer minimumAmount = 0;
 
+  @ManyToOne
+  @JoinColumn(name = "supplier_id")
+  private Supplier supplier;
   @OneToMany(mappedBy = "product")
   private List<ProductEntry> productEntries;
   @OneToMany(mappedBy = "product")
   private List<ProductOut> productOuts;
+
+
 
 }
