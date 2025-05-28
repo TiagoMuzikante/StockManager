@@ -25,8 +25,4 @@ public class Implement {
   @JoinColumn(name = "recipe_id")
   private Recipe recipe;
 
-  @OneToMany
-  @JoinColumn(name ="implement_id")
-  private List<ProductOut> productOuts;
-
 }
