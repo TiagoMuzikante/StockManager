@@ -1,7 +1,7 @@
 package com.lostdev.StockManager.mapper;
 
-import com.lostdev.StockManager.DTOs.utils.ProductItemBasicDTO;
-import com.lostdev.StockManager.DTOs.utils.ProductItemDTO;
+import com.lostdev.StockManager.dtos.utils.ProductItemBasicDTO;
+import com.lostdev.StockManager.dtos.utils.ProductItemDTO;
 import com.lostdev.StockManager.domain.stock.Product;
 import com.lostdev.StockManager.domain.utils.ProductItem;
 import com.lostdev.StockManager.service.ProductService;

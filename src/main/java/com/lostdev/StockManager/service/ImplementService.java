@@ -1,9 +1,9 @@
 package com.lostdev.StockManager.service;
 
-import com.lostdev.StockManager.DTOs.Implement.ImplementBasicDTO;
-import com.lostdev.StockManager.DTOs.Implement.ImplementPostDTO;
-import com.lostdev.StockManager.domain.stock.Implement;
-import com.lostdev.StockManager.domain.stock.Recipe;
+import com.lostdev.StockManager.dtos.Implement.ImplementBasicDTO;
+import com.lostdev.StockManager.dtos.Implement.ImplementPostDTO;
+import com.lostdev.StockManager.domain.Implement;
+import com.lostdev.StockManager.domain.Recipe;
 import com.lostdev.StockManager.mapper.ImplementMapper;
 import com.lostdev.StockManager.repository.ImplementRepository;
 import lombok.RequiredArgsConstructor;

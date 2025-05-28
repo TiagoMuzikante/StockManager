@@ -2,8 +2,8 @@ package com.lostdev.StockManager.mapper;
 
 import com.lostdev.StockManager.domain.stock.Product;
 import com.lostdev.StockManager.domain.stock.ProductOut;
-import com.lostdev.StockManager.DTOs.productOut.ProductOutBasicDTO;
-import com.lostdev.StockManager.DTOs.productOut.ProductOutPostDTO;
+import com.lostdev.StockManager.dtos.productOut.ProductOutBasicDTO;
+import com.lostdev.StockManager.dtos.productOut.ProductOutPostDTO;
 import com.lostdev.StockManager.service.ProductService;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

@@ -1,9 +1,9 @@
 package com.lostdev.StockManager.mapper;
 
-import com.lostdev.StockManager.DTOs.recipe.RecipeBasicDTO;
-import com.lostdev.StockManager.DTOs.recipe.RecipePostDTO;
-import com.lostdev.StockManager.DTOs.utils.ProductItemDTO;
-import com.lostdev.StockManager.domain.stock.Recipe;
+import com.lostdev.StockManager.dtos.recipe.RecipeBasicDTO;
+import com.lostdev.StockManager.dtos.recipe.RecipePostDTO;
+import com.lostdev.StockManager.dtos.utils.ProductItemDTO;
+import com.lostdev.StockManager.domain.Recipe;
 import com.lostdev.StockManager.domain.utils.ProductItem;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

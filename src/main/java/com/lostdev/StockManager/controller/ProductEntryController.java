@@ -1,7 +1,7 @@
 package com.lostdev.StockManager.controller;
 
-import com.lostdev.StockManager.DTOs.productEntry.ProductEntryBasicDTO;
-import com.lostdev.StockManager.DTOs.productEntry.ProductEntryPostDTO;
+import com.lostdev.StockManager.dtos.productEntry.ProductEntryBasicDTO;
+import com.lostdev.StockManager.dtos.productEntry.ProductEntryPostDTO;
 import com.lostdev.StockManager.service.ProductEntryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.lostdev.StockManager.DTOs.productEntry;
+package com.lostdev.StockManager.dtos.productOut;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ProductEntryPostDTO {
+public class ProductOutPostDTO {
 
   private Integer amount;
   private Long productId;

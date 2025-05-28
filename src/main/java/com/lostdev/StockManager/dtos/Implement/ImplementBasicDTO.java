@@ -1,13 +1,11 @@
-package com.lostdev.StockManager.DTOs.Implement;
+package com.lostdev.StockManager.dtos.Implement;
 
 
-import com.lostdev.StockManager.DTOs.recipe.RecipeBasicDTO;
+import com.lostdev.StockManager.dtos.recipe.RecipeBasicDTO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 @Data
 @AllArgsConstructor

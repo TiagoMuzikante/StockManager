@@ -1,8 +1,8 @@
 package com.lostdev.StockManager.mapper;
 
-import com.lostdev.StockManager.DTOs.Implement.ImplementBasicDTO;
-import com.lostdev.StockManager.DTOs.Implement.ImplementPostDTO;
-import com.lostdev.StockManager.domain.stock.Implement;
+import com.lostdev.StockManager.dtos.Implement.ImplementBasicDTO;
+import com.lostdev.StockManager.dtos.Implement.ImplementPostDTO;
+import com.lostdev.StockManager.domain.Implement;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

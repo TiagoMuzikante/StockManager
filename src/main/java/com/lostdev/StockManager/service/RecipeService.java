@@ -1,7 +1,7 @@
 package com.lostdev.StockManager.service;
 
-import com.lostdev.StockManager.DTOs.recipe.RecipePostDTO;
-import com.lostdev.StockManager.domain.stock.Recipe;
+import com.lostdev.StockManager.dtos.recipe.RecipePostDTO;
+import com.lostdev.StockManager.domain.Recipe;
 import com.lostdev.StockManager.mapper.RecipeMapper;
 import com.lostdev.StockManager.repository.RecipeRepository;
 import lombok.RequiredArgsConstructor;

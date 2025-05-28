@@ -1,11 +1,10 @@
 package com.lostdev.StockManager.controller;
 
-import com.lostdev.StockManager.DTOs.Implement.ImplementBasicDTO;
-import com.lostdev.StockManager.DTOs.Implement.ImplementPostDTO;
-import com.lostdev.StockManager.domain.stock.Implement;
+import com.lostdev.StockManager.dtos.Implement.ImplementBasicDTO;
+import com.lostdev.StockManager.dtos.Implement.ImplementPostDTO;
+import com.lostdev.StockManager.domain.Implement;
 import com.lostdev.StockManager.service.ImplementService;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,6 @@
-package com.lostdev.StockManager.DTOs.productEntry;
+package com.lostdev.StockManager.dtos.productEntry;
 
-import com.lostdev.StockManager.DTOs.product.ProductBasicDTO;
+import com.lostdev.StockManager.dtos.product.ProductBasicDTO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

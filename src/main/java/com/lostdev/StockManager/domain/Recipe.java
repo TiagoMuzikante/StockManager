@@ -1,4 +1,4 @@
-package com.lostdev.StockManager.domain.stock;
+package com.lostdev.StockManager.domain;
 
 
 import com.lostdev.StockManager.domain.utils.ProductItem;

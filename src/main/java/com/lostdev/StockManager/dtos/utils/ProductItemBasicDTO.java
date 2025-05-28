@@ -1,4 +1,4 @@
-package com.lostdev.StockManager.DTOs.utils;
+package com.lostdev.StockManager.dtos.utils;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

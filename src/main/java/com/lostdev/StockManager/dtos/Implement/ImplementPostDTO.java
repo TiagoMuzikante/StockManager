@@ -1,6 +1,6 @@
-package com.lostdev.StockManager.DTOs.Implement;
+package com.lostdev.StockManager.dtos.Implement;
 
-import com.lostdev.StockManager.DTOs.recipe.RecipePostDTO;
+import com.lostdev.StockManager.dtos.recipe.RecipePostDTO;
 import lombok.*;
 
 @Data

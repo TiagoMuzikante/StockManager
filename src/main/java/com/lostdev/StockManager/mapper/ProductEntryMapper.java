@@ -2,8 +2,8 @@ package com.lostdev.StockManager.mapper;
 
 import com.lostdev.StockManager.domain.stock.Product;
 import com.lostdev.StockManager.domain.stock.ProductEntry;
-import com.lostdev.StockManager.DTOs.productEntry.ProductEntryBasicDTO;
-import com.lostdev.StockManager.DTOs.productEntry.ProductEntryPostDTO;
+import com.lostdev.StockManager.dtos.productEntry.ProductEntryBasicDTO;
+import com.lostdev.StockManager.dtos.productEntry.ProductEntryPostDTO;
 import com.lostdev.StockManager.service.ProductService;
 import org.mapstruct.*;
 import org.springframework.beans.factory.annotation.Autowired;

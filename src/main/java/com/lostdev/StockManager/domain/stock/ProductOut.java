@@ -1,5 +1,6 @@
 package com.lostdev.StockManager.domain.stock;
 
+import com.lostdev.StockManager.domain.Recipe;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

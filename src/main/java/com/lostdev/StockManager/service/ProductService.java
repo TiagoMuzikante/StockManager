@@ -3,9 +3,9 @@ package com.lostdev.StockManager.service;
 import com.lostdev.StockManager.domain.stock.Product;
 import com.lostdev.StockManager.mapper.ProductMapper;
 import com.lostdev.StockManager.repository.ProductRepository;
-import com.lostdev.StockManager.DTOs.product.ProductBasicDTO;
-import com.lostdev.StockManager.DTOs.product.ProductPostDTO;
-import com.lostdev.StockManager.DTOs.product.ProductPutDTO;
+import com.lostdev.StockManager.dtos.product.ProductBasicDTO;
+import com.lostdev.StockManager.dtos.product.ProductPostDTO;
+import com.lostdev.StockManager.dtos.product.ProductPutDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -48,18 +48,17 @@ public class ProductService {
   }
 
   public void decrementAmount(Product product, int amount){
-    product.setAmount(product.getAmount() - amount);
+    product.setAvailableAmount(product.getAvailableAmount() - amount);
     productRepository.save(product);
   }
 
   public void incrementAmount(Product product, int amount){
-    product.setAmount(product.getAmount() + amount);
+    product.setAvailableAmount(product.getAvailableAmount() + amount);
   }
 
   public void delete(Long id){
     productRepository.delete(findById(id));
   }
-
 
 }
 
