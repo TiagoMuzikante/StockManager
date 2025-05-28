@@ -1,9 +1,11 @@
 package com.lostdev.StockManager.controller;
 
+import com.lostdev.StockManager.DTOs.Implement.ImplementBasicDTO;
 import com.lostdev.StockManager.DTOs.Implement.ImplementPostDTO;
 import com.lostdev.StockManager.domain.stock.Implement;
 import com.lostdev.StockManager.service.ImplementService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,12 +26,12 @@ public class ImplementController {
   }
 
   @GetMapping
-  public ResponseEntity<List<Implement>> listAll(){
+  public ResponseEntity<List<ImplementBasicDTO>> listAll(){
     return ResponseEntity.ok(implementService.listAll());
   }
 
   @GetMapping("/{id}")
-  public ResponseEntity<Implement> findById(@PathVariable Long id){
+  public ResponseEntity<ImplementBasicDTO> findById(@PathVariable Long id){
     return ResponseEntity.ok(implementService.findById(id));
   }
 
