@@ -23,9 +23,7 @@ public class ProductOut {
   private Product product;
 
   @ManyToOne
-  private Implement implement;
-
-  @ManyToOne
+  @JoinColumn(name = "recipe_id")
   private Recipe recipe;
 
 }
