@@ -1,26 +1,17 @@
 package com.lostdev.StockManager.mapper;
 
+import com.lostdev.StockManager.DTOs.Implement.ImplementBasicDTO;
 import com.lostdev.StockManager.DTOs.Implement.ImplementPostDTO;
 import com.lostdev.StockManager.domain.stock.Implement;
-import com.lostdev.StockManager.domain.stock.Recipe;
-import com.lostdev.StockManager.service.RecipeService;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.Named;
-import org.springframework.beans.factory.annotation.Autowired;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = RecipeMapper.class)
 public abstract class ImplementMapper {
 
-  @Autowired
-  protected RecipeService recipeService;
-
-  @Mapping(source = "recipeId", target = "recipe", qualifiedByName = "idToRecipe")
+  @Mapping(target = "recipe", ignore = true)
   public abstract Implement toImplement(ImplementPostDTO implementPostDTO);
 
-  @Named("idToRecipe")
-  protected Recipe idToRecipe(Long id){
-    return recipeService.findById(id);
-  }
-
+  public abstract ImplementBasicDTO toBasic(Implement implement);
+  
 }
