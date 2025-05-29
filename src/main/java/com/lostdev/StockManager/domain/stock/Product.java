@@ -2,10 +2,8 @@ package com.lostdev.StockManager.domain.stock;
 
 import com.lostdev.StockManager.domain.Supplier;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
 import java.util.List;
 
 @Data
@@ -13,6 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Entity
+@ToString
 public class Product {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
