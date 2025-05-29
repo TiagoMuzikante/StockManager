@@ -10,7 +10,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -28,10 +27,7 @@ public class ImplementService {
   }
 
   public List<ImplementBasicDTO> listAll(){
-    return implementRepository.findAll()
-        .stream()
-        .map(implementMapper::toBasic)
-        .collect(Collectors.toList());
+    return implementMapper.toBasicList(implementRepository.findAll());
   }
 
   public ImplementBasicDTO findById(Long id){
