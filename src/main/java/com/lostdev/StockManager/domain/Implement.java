@@ -23,4 +23,8 @@ public class Implement {
   @JoinColumn(name = "recipe_id")
   private Recipe recipe;
 
+  @ManyToOne
+  @JoinColumn(name = "truck_id")
+  private Truck truck;
+
 }
