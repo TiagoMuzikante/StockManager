@@ -2,6 +2,7 @@ package com.lostdev.StockManager.controller;
 
 import com.lostdev.StockManager.domain.stock.Product;
 import com.lostdev.StockManager.dtos.product.ProductBasicDTO;
+import com.lostdev.StockManager.dtos.product.ProductNoReferenceDTO;
 import com.lostdev.StockManager.dtos.product.ProductPostDTO;
 import com.lostdev.StockManager.service.ProductService;
 import lombok.RequiredArgsConstructor;
@@ -14,11 +15,16 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("produtos")
+@RequestMapping("/product")
 @RequiredArgsConstructor
 public class ProductController {
 
   private final ProductService productService;
+
+  @PostMapping
+  public ResponseEntity<ProductBasicDTO> save(@RequestBody ProductPostDTO productPostDTO){
+    return new ResponseEntity<>(productService.save(productPostDTO), HttpStatus.CREATED);
+  }
 
   @GetMapping
   public ResponseEntity<List<ProductBasicDTO>> listAllBasic(){
@@ -26,19 +32,15 @@ public class ProductController {
   }
 
   @GetMapping("/all")
-  public ResponseEntity<List<ProductBasicDTO>> listAll(){
+  public ResponseEntity<List<ProductNoReferenceDTO>> listAll(){
     return ResponseEntity.ok(productService.listAll());
   }
-  
-  @GetMapping("{id}/show")
+
+  @GetMapping("/{id}")
   public ResponseEntity<Product> showProduct(@PathVariable Long id){
     return new ResponseEntity<>(productService.findById(id), HttpStatus.OK);
   }
 
-  @PostMapping
-  public ResponseEntity<ProductBasicDTO> save(@RequestBody ProductPostDTO productPostDTO){
-    return new ResponseEntity<>(productService.save(productPostDTO), HttpStatus.CREATED);
-  }
 
 }
  
