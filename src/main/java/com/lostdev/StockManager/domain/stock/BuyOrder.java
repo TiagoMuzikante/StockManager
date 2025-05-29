@@ -6,10 +6,11 @@ import com.lostdev.StockManager.enums.buy.Reason;
 import com.lostdev.StockManager.enums.buy.Status;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-
+@NoArgsConstructor
 public class BuyOrder {
 
   @Id
