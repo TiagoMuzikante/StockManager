@@ -21,7 +21,8 @@ public class Supplier {
   private Long id;
 
   private String name;
-  private String contact;
+  private String email;
+  private String wppNumber;
 
   @OneToMany(mappedBy = "supplier")
   private List<Product> products;
