@@ -5,8 +5,6 @@ import com.lostdev.StockManager.dtos.supplier.SupplierBasicDTO;
 import com.lostdev.StockManager.dtos.supplier.SupplierPostDTO;
 import org.mapstruct.Mapper;
 
-import java.util.List;
-
 @Mapper(componentModel = "spring")
 public abstract class SupplierMapper {
 
