@@ -19,7 +19,12 @@ public class ProductOutController {
 
   private final ProductOutService productOutService;
 
-  @GetMapping
+  @PostMapping
+  public ResponseEntity<ProductOutBasicDTO> save(@RequestBody ProductOutPostDTO productOutPostDTO){
+    return new ResponseEntity<ProductOutBasicDTO>(productOutService.save(productOutPostDTO), HttpStatus.CREATED);
+  }
+
+  @GetMapping("/all")
   public ResponseEntity<List<ProductOutBasicDTO>> listAll(){
     return ResponseEntity.ok(productOutService.findAll());
   }
@@ -34,9 +39,5 @@ public class ProductOutController {
     return ResponseEntity.ok(productOutService.findAllWithProductId(productId));
   }
 
-  @PostMapping
-  public ResponseEntity<ProductOutBasicDTO> save(@RequestBody ProductOutPostDTO productOutPostDTO){
-    return new ResponseEntity<ProductOutBasicDTO>(productOutService.save(productOutPostDTO), HttpStatus.CREATED);
-  }
 
 }
