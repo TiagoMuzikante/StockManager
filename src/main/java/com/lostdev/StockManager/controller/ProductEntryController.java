@@ -1,5 +1,6 @@
 package com.lostdev.StockManager.controller;
 
+import com.lostdev.StockManager.domain.stock.ProductEntry;
 import com.lostdev.StockManager.dtos.productEntry.ProductEntryBasicDTO;
 import com.lostdev.StockManager.dtos.productEntry.ProductEntryPostDTO;
 import com.lostdev.StockManager.service.ProductEntryService;
@@ -26,6 +27,11 @@ public class ProductEntryController {
   @GetMapping
   public ResponseEntity<List<ProductEntryBasicDTO>> listAll(){
     return new ResponseEntity<>(productEntryService.listAll(), HttpStatus.OK);
+  }
+
+  @GetMapping("/{id}")
+  public ResponseEntity<ProductEntry> findById(@PathVariable Long id){
+    return ResponseEntity.ok(productEntryService.findById(id));
   }
 
   @GetMapping("/product/{productId}")
