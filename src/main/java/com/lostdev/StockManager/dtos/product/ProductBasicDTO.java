@@ -11,6 +11,7 @@ public class ProductBasicDTO {
 
   private Long id;
   private String name;
+  private String brand;
   private Integer availableAmount;
   private Integer reservedAmount;
   private Integer pendingAmount;
