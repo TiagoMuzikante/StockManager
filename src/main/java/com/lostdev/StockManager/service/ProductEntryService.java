@@ -26,8 +26,8 @@ public class ProductEntryService {
     return productEntryMapper.toBasic(productEntryRepository.save(productEntry));
   }
 
-  public ProductEntry findById(Long id){
-    return productEntryRepository.findById(id).orElseThrow(() -> new RuntimeException("Entrada de produto não encontrada"));
+  public ProductEntryBasicDTO findById(Long id){
+    return productEntryMapper.toBasic(productEntryRepository.findById(id).orElseThrow(() -> new RuntimeException("Entrada de produto não encontrada")));
   }
 
   public List<ProductEntryBasicDTO> listAll(){
