@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 public class SupplierPostDTO {
 
   private String name;
-  private String contact;
+  private String email;
+  private String wppNumber;
 
 }
