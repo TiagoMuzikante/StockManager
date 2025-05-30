@@ -30,7 +30,7 @@ public class ProductEntryController {
   }
 
   @GetMapping("/{id}")
-  public ResponseEntity<ProductEntry> findById(@PathVariable Long id){
+  public ResponseEntity<ProductEntryBasicDTO> findById(@PathVariable Long id){
     return ResponseEntity.ok(productEntryService.findById(id));
   }
 
