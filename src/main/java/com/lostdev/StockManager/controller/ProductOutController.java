@@ -24,7 +24,7 @@ public class ProductOutController {
     return new ResponseEntity<ProductOutBasicDTO>(productOutService.save(productOutPostDTO), HttpStatus.CREATED);
   }
 
-  @GetMapping("/all")
+  @GetMapping()
   public ResponseEntity<List<ProductOutBasicDTO>> listAll(){
     return ResponseEntity.ok(productOutService.findAll());
   }
