@@ -1,9 +1,7 @@
-package com.lostdev.StockManager.service;
+package com.lostdev.StockManager.service.domainService;
 
 import com.lostdev.StockManager.dtos.Implement.ImplementBasicDTO;
-import com.lostdev.StockManager.dtos.Implement.ImplementPostDTO;
 import com.lostdev.StockManager.domain.Implement;
-import com.lostdev.StockManager.domain.Recipe;
 import com.lostdev.StockManager.mapper.ImplementMapper;
 import com.lostdev.StockManager.repository.ImplementRepository;
 import lombok.RequiredArgsConstructor;
@@ -17,12 +15,8 @@ public class ImplementService {
 
   private final ImplementRepository implementRepository;
   private final ImplementMapper implementMapper;
-  private final RecipeService recipeService;
 
-  public Implement save(ImplementPostDTO implementPostDTO){
-    Recipe recipe = recipeService.save(implementPostDTO.getRecipe());
-    Implement implement = implementMapper.toImplement(implementPostDTO);
-    implement.setRecipe(recipe);
+  public Implement save(Implement implement){
     return implementRepository.save(implement);
   }
 
