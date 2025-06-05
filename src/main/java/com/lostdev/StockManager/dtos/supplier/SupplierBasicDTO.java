@@ -13,6 +13,6 @@ public class SupplierBasicDTO {
 
   private Long id;
   private String name;
-  private String wppNumber;
+  private String phone_number;
 
 }
