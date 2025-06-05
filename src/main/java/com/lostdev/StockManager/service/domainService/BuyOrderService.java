@@ -1,4 +1,4 @@
-package com.lostdev.StockManager.service;
+package com.lostdev.StockManager.service.domainService;
 
 import com.lostdev.StockManager.domain.stock.BuyOrder;
 import com.lostdev.StockManager.repository.BuyOrderRepository;
@@ -13,10 +13,11 @@ public class BuyOrderService {
 
 
   public BuyOrder save(BuyOrder buyOrder){
-    buyOrder.getProduct().setPendingAmount(buyOrder.getProduct().getPendingAmount() + buyOrder.getAmount());
-
     return buyOrderRepository.save(buyOrder);
   }
 
+  public BuyOrder findById(Long id){
+    return buyOrderRepository.findById(id).orElseThrow(() -> new RuntimeException("nenhum resultado encontado"));
+  }
 
 }
