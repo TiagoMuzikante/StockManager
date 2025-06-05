@@ -1,9 +1,8 @@
 package com.lostdev.StockManager.controller;
 
-import com.lostdev.StockManager.domain.stock.ProductEntry;
 import com.lostdev.StockManager.dtos.productEntry.ProductEntryBasicDTO;
 import com.lostdev.StockManager.dtos.productEntry.ProductEntryPostDTO;
-import com.lostdev.StockManager.service.ProductEntryService;
+import com.lostdev.StockManager.service.domainService.ProductEntryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,10 +18,10 @@ public class ProductEntryController {
 
   private final ProductEntryService productEntryService;
 
-  @PostMapping
-  public ResponseEntity<ProductEntryBasicDTO> save(@RequestBody ProductEntryPostDTO productEntryPostDTO){
-    return new ResponseEntity<>(productEntryService.save(productEntryPostDTO), HttpStatus.CREATED);
-  }
+//  @PostMapping
+//  public ResponseEntity<ProductEntryBasicDTO> save(@RequestBody ProductEntryPostDTO productEntryPostDTO){
+//    return new ResponseEntity<>(productEntryService.save(productEntryPostDTO), HttpStatus.CREATED);
+//  }
 
   @GetMapping
   public ResponseEntity<List<ProductEntryBasicDTO>> listAll(){
