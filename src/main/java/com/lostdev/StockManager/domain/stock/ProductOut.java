@@ -1,7 +1,6 @@
 package com.lostdev.StockManager.domain.stock;
 
 import com.lostdev.StockManager.domain.Recipe;
-import com.lostdev.StockManager.domain.listener.ProductOutListener;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,7 +12,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Data
-@EntityListeners(ProductOutListener.class)
 public class ProductOut {
 
   @Id
