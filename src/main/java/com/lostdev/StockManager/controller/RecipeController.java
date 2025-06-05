@@ -2,7 +2,7 @@ package com.lostdev.StockManager.controller;
 
 
 import com.lostdev.StockManager.domain.Recipe;
-import com.lostdev.StockManager.service.RecipeService;
+import com.lostdev.StockManager.service.domainService.RecipeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
