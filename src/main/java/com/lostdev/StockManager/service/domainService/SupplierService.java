@@ -1,4 +1,4 @@
-package com.lostdev.StockManager.service;
+package com.lostdev.StockManager.service.domainService;
 
 import com.lostdev.StockManager.domain.Supplier;
 import com.lostdev.StockManager.dtos.supplier.SupplierBasicDTO;
