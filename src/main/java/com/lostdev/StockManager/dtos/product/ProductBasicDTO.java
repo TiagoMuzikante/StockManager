@@ -17,5 +17,6 @@ public class ProductBasicDTO {
   private Integer pendingAmount;
   private Integer minimumAmount;
   private String address;
+  private Integer price_in_cents;
 
 }
