@@ -4,7 +4,7 @@ import com.lostdev.StockManager.dtos.utils.ProductItemBasicDTO;
 import com.lostdev.StockManager.dtos.utils.ProductItemDTO;
 import com.lostdev.StockManager.domain.stock.Product;
 import com.lostdev.StockManager.domain.utils.ProductItem;
-import com.lostdev.StockManager.service.ProductService;
+import com.lostdev.StockManager.service.domainService.ProductService;
 import lombok.extern.log4j.Log4j2;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
