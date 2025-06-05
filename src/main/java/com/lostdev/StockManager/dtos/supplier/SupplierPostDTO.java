@@ -13,6 +13,6 @@ public class SupplierPostDTO {
 
   private String name;
   private String email;
-  private String wppNumber;
+  private String phone_number;
 
 }
