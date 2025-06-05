@@ -22,7 +22,7 @@ public class Supplier {
 
   private String name;
   private String email;
-  private String wppNumber;
+  private String phone_number;
 
   @OneToMany(mappedBy = "supplier")
   private List<Product> products;
